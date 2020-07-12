@@ -59,7 +59,7 @@ https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
 
 ## Priority Matrix
 
-￼￼￼[Priority Matrix link](https://www.icloud.com/iclouddrive/0N8C7wtjlsoBZ5V9mVy8TI7zQ#Priority_Matrix)
+[Priority Matrix](https://drive.google.com/file/d/1I8h4LY3Nndz2afWAAJcvyN-wVZEoDX9R/view?usp=sharing)
 
 ## Timeframes
 
