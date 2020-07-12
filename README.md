@@ -1,79 +1,89 @@
 # Project Overview
 
-## Project Name
+##  Cocktail Helper
 
-The name of your project.
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This application will take the users input of a liquor type (Vodka, Gin, Tequila ect...), and return a list of possible 
+cocktails they can make, along with a step by step recepie, and picture of a finished professionally made cocktail.
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
+
+```
+"drinks": [
+        {
+            "idDrink": "17840",
+            "strDrink": "Affinity",
+            "strGlass": "Cocktail glass",
+            "strInstructions": "In a mixing glass half-filled with ice cubes, combine all of the ingredients. Stir well. 		Strain into a cocktail glass.",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/wzdtnn1582477684.jpg",
+            "strIngredient1": "Scotch",
+            "strIngredient2": "Sweet Vermouth",
+            "strIngredient3": "Dry Vermouth",
+            "strIngredient4": "Orange bitters",
+	    }
+```
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+[wireFrame Link](https://wireframe.cc/JDtQ9f)
 
-### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+1. Search using spirit name 
+2. view ingredients needed for drink 
+3. view drink recipe / preparation 
+4. view history / info of drink. 
+5. see an img of completed drink
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+1. fun css that animates a shaker when page results load
+2. Design html/css to make it look like a bar
+3. Make an interactive ’speed rack’ image so you can just click on img of popular spirits.
+4. 'email this recipe' feature (as a recepie card w/ image).
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|Mon July 13| Build basic Structure of HTML, CSS and start implementation of API | Incomplete
+|Tues July 14| Continue API implementation and test results  | Incomplete
+|Wed July 15| Make sure CSS is complient with different sizes  | Incomplete
+|Thurs July 16| Clean up, add additional features if time allows | Incomplete
+|Fri July 17| final clean up / present | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+￼￼￼[Priority Matrix link](https://www.icloud.com/iclouddrive/0N8C7wtjlsoBZ5V9mVy8TI7zQ#Priority_Matrix)
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Building out basic HTML / CSS frame | H | 3hrs| TBD | TBD |
+| Apllying basic flex-box to different sized screens | H | 2hrs| TBD | TBD |
+| Forming basic Javascript API implementation | H | 3hrs| TBD | TBD |
+| Apllying and testing API functionality | H | 6hrs| TBD | TBD |
+| Cleaning up CSS / flex-box to fit output results | M | 2hrs| TBD | TBD |
+| Finish Cleaning up CSS / flex-box to fit output results | M | 3hrs| TBD | TBD |
+| Add extra features to CSS (background Image and basic feel of page) | M | 5hrs| TBD | TBD |
+| Cleaning up CSS / flex-box to fit output results | M | 3hrs| TBD | TBD |
+| Add in any additional features from post MVP list | M | 5hrs| TBD | TBD |
+| Clean up / catch up / finish anything needed for presentation | M | 4hrs| TBD | TBD |
+| Total | H | 36hrs| 5hrs | 5hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
+  
+TBD
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ TBD
