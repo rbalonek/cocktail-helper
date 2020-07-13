@@ -8,7 +8,7 @@ async function liquorSearch(drink) {
     // console.log(liquorList.strDrink)
     showCocktailName(data)
     showCocktailImg(data)
-    showRecepie(data)
+    // showRecepie(data)
     searchFromId()
     // console.log(response.data)
   } catch (error) {
@@ -30,12 +30,12 @@ function showCocktailImg(dataObj) {
   document.querySelector('#recepie-data').insertAdjacentHTML('beforeend', cocktailImg)
 }
 
-function showRecepie(dataObj) {
-  let recepieText = `
-  <p id="drink-id">${dataObj.idDrink}</p> 
-  `
-  document.querySelector('#recepie').insertAdjacentHTML('beforeend', recepieText)
-}
+// function showRecepie(dataObj) {
+//   let recepieText = `
+//   <p id="drink-id">${dataObj.idDrink}</p> 
+//   `
+//   document.querySelector('#recepie').insertAdjacentHTML('beforeend', recepieText)
+// }
 
 
 
@@ -78,9 +78,17 @@ async function searchFromId() {
   try {
     let response = await axios.get(searchURL);
     let data = response.data.drinks[0]
-    console.log(response.data)
+    // console.log(response.data)
+    showRecepie(data)
   } catch (error) {
   console.log(`bob err 2nd api: ${error}`)
   }
 }
 // searchFromId()
+
+function showRecepie(dataObj) {
+  let recepieText = `
+  <p id="drink-recepie">${dataObj.strInstructions}</p> 
+  `
+  document.querySelector('#recepie').insertAdjacentHTML('beforeend', recepieText)
+}
