@@ -1,0 +1,118 @@
+header {
+  background-color: aquamarine;
+  padding: 50px;
+}
+
+article {
+  background-color: lightsalmon;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+aside {
+  background-color: lightskyblue;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: lightgoldenrodyellow;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* HERE COMES SOME FLEXBOX */
+/* set body as container */
+body {
+  display: flex; 
+  flex-direction: column;
+  /* height 100 to the view height. for like phones I think... */
+  min-height: 100vh;
+}
+
+header,
+footer{
+  height: 100px;
+  /* changing both wider */
+  flex: 0 150px;
+}
+/* in main, we have: content, left, and right side bar */
+main{
+  /* now these are in a row */
+  flex: 1;
+  display: flex;
+}
+
+article {
+  /* pulling out of natural order of 0 */
+  order: 2;
+  /* making it 3x size of other articles */
+  flex: 3;
+}
+
+aside{
+  /* half size of header and footer */
+  flex: 0 300px;
+}
+
+/* putting content in middle */
+.left {
+  order: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+.right {
+  order: 3;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+#liquor-search {
+  background-color: blue;
+  height: 100px;
+}
+
+#cocktail-results {
+  background-color: black;
+  height: 300px;
+}
+
+#cocktail-recepie {
+  background-color: blue;
+  height: 200px;
+}
+
+#result-img {
+  background-color: blue;
+  height: 200px;
+}
+
+
+
+
+/* media query.  check out mozilla  using media queries  max width breakpoint to test if screen smaller / biger */
+
+/* @media screen and (max-width: 1025px){
+  body{
+    /* this changes background when width is small*/
+    /* background-color: black; */
+  /* }
+} */
+/* This one converts to mobile */
+@media screen and (max-width: 1025px){
+  main{
+    flex-direction: column;
+  }
+  article{
+    order:0;
+    flex: 0 300px;
+  }
+  aside {
+    flex: 0;
+  }
+}
