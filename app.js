@@ -16,9 +16,24 @@ liquorSearch()
 
 
 function showCocktailName(dataObj) {
-  let liquorInfo = `<h2 id="drink-name">${dataObj.strDrink}</h2>`
-  document.querySelector('#liquor-data').insertAdjacentHTML('beforeend', liquorInfo)
+  let cocktailName = `
+  <h2 id="drink-name">${dataObj.strDrink}</h2> 
+  <p id="drink-name">${dataObj.idDrink}</p>
+  <img id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">
+  `
+  document.querySelector('#liquor-data').insertAdjacentHTML('beforeend', cocktailName)
 }
+
+// function showCocktailImg(dataObj) {
+//   let cocktailImg = `<img id="cocktail" src="${dataObj.strDrink.strDrinkThumb}" alt="drink">`
+//   document.querySelector('#result-img').insertAdjacentElement("beforeend", cocktailImg)
+// }
+//<p id="drink-name">${dataObj.idDrink}</p>
+
+// function showRecepie(dataObj) {
+//   let recepieText = `<h2 id="drink-name">${dataObj.strDrink}</h2>`
+//   document.querySelector('#cocktail-recepie').insertAdjacentElement("beforeend", recepieText)
+// }
 
 const submit = document.querySelector('#liquor-form')
 
@@ -40,3 +55,12 @@ function removeLiquor() {
     appendElement.removeChild(appendElement.lastChild)
   }
 }
+
+
+///// Get dataObj.strDrink.idDrink and us it to go through another API to get 
+
+//// FROM https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Scotch
+
+///USE ID ${} TO PULL FROM https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
+
+///Get recepie, 
