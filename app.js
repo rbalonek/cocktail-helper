@@ -9,6 +9,7 @@ async function liquorSearch(drink) {
     showCocktailName(data)
     showCocktailImg(data)
     showRecepie(data)
+    searchFromId()
     // console.log(response.data)
   } catch (error) {
   console.log(`bobs error: ${error}`)
@@ -16,7 +17,7 @@ async function liquorSearch(drink) {
 }
 liquorSearch()
 
-
+//////////////////////////////Pulls Up Name, Image, and ID
 function showCocktailName(dataObj) {
   let cocktailName = `
   <h2 id="drink-name">${dataObj.strDrink}</h2> 
@@ -38,7 +39,7 @@ function showRecepie(dataObj) {
 
 
 
-
+/////////////////////////
 const submit = document.querySelector('#liquor-form')
 
 submit.addEventListener('submit', (e) => {
@@ -68,3 +69,18 @@ function removeLiquor() {
 ///USE ID ${} TO PULL FROM https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
 
 ///Get recepie, 
+
+
+// let drinkId = ${dataObj.idDrink}
+
+async function searchFromId() {
+  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840`;
+  try {
+    let response = await axios.get(searchURL);
+    let data = response.data.drinks[0]
+    console.log(response.data)
+  } catch (error) {
+  console.log(`bob err 2nd api: ${error}`)
+  }
+}
+// searchFromId()
