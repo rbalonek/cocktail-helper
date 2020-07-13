@@ -1,22 +1,17 @@
 async function liquorSearch(drink) {
   const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
+  for (let i = 0; i < 5; i++)
   try {
     let response = await axios.get(searchURL);
-    let data = response.data.drinks[0]
-    removeLiquor()
-    removeLeftSidebar()
-    removeRightSidebar()
-    // liquorResults(data.data.Search)
-    // console.log(liquorList.strDrink)
+    let data = response.data.drinks[i]
     showCocktailName(data)
     showCocktailImg(data)
-    // showRecepie(data)
-    searchFromId()
+    searchFromId(data.idDrink)
     // console.log(response.data)
   } catch (error) {
   console.log(`bobs error: ${error}`)
   }
-}
+  }
 liquorSearch()
 
 //////////////////////////////Pulls Up Name, Image, and ID
@@ -26,22 +21,13 @@ function showCocktailName(dataObj) {
   `
   document.querySelector('#liquor-data').insertAdjacentHTML('beforeend', cocktailName)
 }
-
 function showCocktailImg(dataObj) {
   let cocktailImg = `<img id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">`
   document.querySelector('#recepie-data').insertAdjacentHTML('beforeend', cocktailImg)
 }
 
-// function showRecepie(dataObj) {
-//   let recepieText = `
-//   <p id="drink-id">${dataObj.idDrink}</p> 
-//   `
-//   document.querySelector('#recepie').insertAdjacentHTML('beforeend', recepieText)
-// }
 
-
-
-/////////////////////////
+//////////////////////////////SEARCH Button
 const submit = document.querySelector('#liquor-form')
 
 submit.addEventListener('submit', (e) => {
@@ -54,30 +40,30 @@ submit.addEventListener('submit', (e) => {
   document.querySelector('#liquor-search').placeholder = 'Liquor Type'
   //to make sure it's coming up with the right thing... It does!
   // console.log(inputValue)
+  removeLiquor()
+  removeLeftSidebar()
+  removeRightSidebar()
 })
 
+//////////////////////////////Removes previous SEARCH
 function removeLiquor() {
   const appendElement = document.querySelector('#liquor-data')
   while (appendElement.lastChild) {
     appendElement.removeChild(appendElement.lastChild)
   }
 }
-
 function removeLeftSidebar() {
   const appendElement = document.querySelector('#recepie')
   while (appendElement.lastChild) {
     appendElement.removeChild(appendElement.lastChild)
   }
 }
-
 function removeRightSidebar() {
   const appendElement = document.querySelector('#recepie-data')
   while (appendElement.lastChild) {
     appendElement.removeChild(appendElement.lastChild)
   }
 }
-
-
 
 ///// Get dataObj.strDrink.idDrink and us it to go through another API to get 
 
@@ -90,12 +76,12 @@ function removeRightSidebar() {
 
 // let drinkId = ${dataObj.idDrink}
 
-async function searchFromId() {
-  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840`;
+async function searchFromId(id) {
+  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
   try {
     let response = await axios.get(searchURL);
     let data = response.data.drinks[0]
-    console.log(response.data)
+    // console.log(response.data)
     showRecepie(data)
     showIngredients(data)
   } catch (error) {
@@ -118,4 +104,3 @@ function showIngredients(dataObj) {
   document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
 }
 
-/////now removetext for everything on new search
