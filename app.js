@@ -7,6 +7,8 @@ async function liquorSearch(drink) {
     // liquorResults(data.data.Search)
     // console.log(liquorList.strDrink)
     showCocktailName(data)
+    showCocktailImg(data)
+    showRecepie(data)
     // console.log(response.data)
   } catch (error) {
   console.log(`bobs error: ${error}`)
@@ -18,22 +20,24 @@ liquorSearch()
 function showCocktailName(dataObj) {
   let cocktailName = `
   <h2 id="drink-name">${dataObj.strDrink}</h2> 
-  <p id="drink-name">${dataObj.idDrink}</p>
-  <img id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">
   `
   document.querySelector('#liquor-data').insertAdjacentHTML('beforeend', cocktailName)
 }
 
-// function showCocktailImg(dataObj) {
-//   let cocktailImg = `<img id="cocktail" src="${dataObj.strDrink.strDrinkThumb}" alt="drink">`
-//   document.querySelector('#result-img').insertAdjacentElement("beforeend", cocktailImg)
-// }
-//<p id="drink-name">${dataObj.idDrink}</p>
+function showCocktailImg(dataObj) {
+  let cocktailImg = `<img id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">`
+  document.querySelector('#recepie-data').insertAdjacentHTML('beforeend', cocktailImg)
+}
 
-// function showRecepie(dataObj) {
-//   let recepieText = `<h2 id="drink-name">${dataObj.strDrink}</h2>`
-//   document.querySelector('#cocktail-recepie').insertAdjacentElement("beforeend", recepieText)
-// }
+function showRecepie(dataObj) {
+  let recepieText = `
+  <p id="drink-id">${dataObj.idDrink}</p> 
+  `
+  document.querySelector('#recepie').insertAdjacentHTML('beforeend', recepieText)
+}
+
+
+
 
 const submit = document.querySelector('#liquor-form')
 
