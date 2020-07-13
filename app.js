@@ -78,17 +78,25 @@ async function searchFromId() {
   try {
     let response = await axios.get(searchURL);
     let data = response.data.drinks[0]
-    // console.log(response.data)
+    console.log(response.data)
     showRecepie(data)
+    showIngredients(data)
   } catch (error) {
   console.log(`bob err 2nd api: ${error}`)
   }
 }
-// searchFromId()
 
 function showRecepie(dataObj) {
-  let recepieText = `
-  <p id="drink-recepie">${dataObj.strInstructions}</p> 
-  `
+  let recepieText = `<h3 id="drink-recepie">${dataObj.strInstructions}</h3>`
   document.querySelector('#recepie').insertAdjacentHTML('beforeend', recepieText)
+}
+
+function showIngredients(dataObj) {
+  let ingredientText = `
+  <li id="drink-recepie">${dataObj.strIngredient1}, ${dataObj.strMeasure1} </li>
+  <li id="drink-recepie">${dataObj.strIngredient2}, ${dataObj.strMeasure2}</li>
+  <li id="drink-recepie">${dataObj.strIngredient3}, ${dataObj.strMeasure3}</li>
+  <li id="drink-recepie">${dataObj.strIngredient4}, ${dataObj.strMeasure4}</li>
+  `
+  document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
 }
