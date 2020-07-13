@@ -4,9 +4,9 @@ const spiritSelection = `vodka`
 
 // const input = document.querySelector('#input-liquor')
 // const toDoButton = document.querySelector('#submit-button')
-
-const liquorSearch = async () => {
-  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=gin`;
+async function liquorSearch(drink) {
+// const liquorSearch = async () => {
+  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
   try {
     let response = await axios.get(searchURL);
     let data = response.data.drinks[0]
@@ -14,7 +14,7 @@ const liquorSearch = async () => {
     // liquorResults(data.data.Search)
     // console.log(liquorList.strDrink)
     showCocktailName(data)
-    console.log(response.data)
+    // console.log(response.data)
   } catch (error) {
   console.log(`bobs error: ${error}`)
   }
@@ -37,13 +37,14 @@ const submit = document.querySelector('#liquor-form')
 submit.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#liquor-search').value
-  //console.log(inputValue) to make sure it's coming up with the right thing
+  // console.log(inputValue)
   liquorSearch(inputValue)
   //This resets the search bar when used
   document.querySelector('#liquor-search').value = ''
   //This changes the placeholder or the search bar suggestion line
   document.querySelector('#liquor-search').placeholder = 'Insert Liquor'
-
+  //to make sure it's coming up with the right thing... It does!
+  // console.log(inputValue)
 })
 
 function removeLiquor() {
