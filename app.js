@@ -4,6 +4,8 @@ async function liquorSearch(drink) {
     let response = await axios.get(searchURL);
     let data = response.data.drinks[0]
     removeLiquor()
+    removeLeftSidebar()
+    removeRightSidebar()
     // liquorResults(data.data.Search)
     // console.log(liquorList.strDrink)
     showCocktailName(data)
@@ -61,6 +63,21 @@ function removeLiquor() {
   }
 }
 
+function removeLeftSidebar() {
+  const appendElement = document.querySelector('#recepie')
+  while (appendElement.lastChild) {
+    appendElement.removeChild(appendElement.lastChild)
+  }
+}
+
+function removeRightSidebar() {
+  const appendElement = document.querySelector('#recepie-data')
+  while (appendElement.lastChild) {
+    appendElement.removeChild(appendElement.lastChild)
+  }
+}
+
+
 
 ///// Get dataObj.strDrink.idDrink and us it to go through another API to get 
 
@@ -100,3 +117,5 @@ function showIngredients(dataObj) {
   `
   document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
 }
+
+/////now removetext for everything on new search
