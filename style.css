@@ -100,9 +100,11 @@ aside{
 }
 
 #drink-name {
-  padding: 200px;
+  padding-bottom: 100px;
 }
+#liquor-form{
 
+}
 
 
 /* media query.  check out mozilla  using media queries  max width breakpoint to test if screen smaller / biger */
@@ -114,9 +116,9 @@ aside{
   /* }
 } */
 /* This one converts to mobile */
-/* @media screen and (max-width: 1025px){
+@media screen and (max-width: 650px){
   main{
-    flex-direction: column;
+    flex-direction: row-reverse;
   }
   article{
     order:0;
@@ -125,4 +127,15 @@ aside{
   aside {
     flex: 0;
   }
+  /* .left {
+  order: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 50px;
+  padding-bottom: 0px;
 } */
+#cocktail{
+  height: 50px;
+  width: auto;
+}
+}

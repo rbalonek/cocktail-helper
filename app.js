@@ -94,13 +94,16 @@ function showRecepie(dataObj) {
   document.querySelector('#recepie').insertAdjacentHTML('beforeend', recepieText)
 }
 
+////////// SEE IF YOU CAN DO SOMETHING LIKE ${dataObj.strMeasure[i]}
 function showIngredients(dataObj) {
-  let ingredientText = `
+  for (let i = 1; i < 4; i++) {
+    let ingredientText = `
   <li id="drink-recepie">${dataObj.strIngredient1}, ${dataObj.strMeasure1} </li>
   <li id="drink-recepie">${dataObj.strIngredient2}, ${dataObj.strMeasure2}</li>
   <li id="drink-recepie">${dataObj.strIngredient3}, ${dataObj.strMeasure3}</li>
   <li id="drink-recepie">${dataObj.strIngredient4}, ${dataObj.strMeasure4}</li>
   `
-  document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
+    document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
+  }
 }
 
