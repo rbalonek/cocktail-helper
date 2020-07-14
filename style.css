@@ -53,6 +53,11 @@ footer{
 /* in main, we have: content, left, and right side bar */
 main{
   /* now these are in a row */
+  /* https://cdn5.vectorstock.com/i/1000x1000/08/59/empty-wooden-shelf-background-vector-9500859.jpg */
+  /* https://image.freepik.com/free-vector/wooden-shelves-background_108964-346.jpg */
+  background-image: url('https://image.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg');
+  background-repeat: repeat;
+  background-size: cover; ;
   flex: 1;
   display: flex;
 }
@@ -80,9 +85,9 @@ aside{
 
 .right {
   order: 3;
-  padding-right: 10px;
+  padding-right: 0px;
   padding-left: 10px;
-  padding-top: 50px;
+  padding-top: 0px;
   padding-bottom: 0px;
 }
 
@@ -110,6 +115,8 @@ aside{
 #cocktail{
   height: 200px;
   width: auto;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 #drink-name {
