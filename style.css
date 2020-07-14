@@ -6,14 +6,14 @@ header {
 }
 
 article {
-  background-color: lightsalmon;
+  /* background-color: lightsalmon; */
   padding: 0px;
   box-sizing: border-box;
   /* border-color: black; */
 }
 
 aside {
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
   padding: 50px;
   box-sizing: border-box;
 }
@@ -81,7 +81,7 @@ aside{
 } */
 
 #cocktail-results {
-  background-color: black;
+  /* background-color: black; */
   height: 300px;
 }
 
@@ -93,7 +93,7 @@ aside{
 } */
 
 #result-img {
-  background-color: blue;
+  /* background-color: blue; */
   height: 200px;
 }
 #cocktail{
@@ -173,6 +173,10 @@ article {
   aside {
     flex: 0;
   }
+  h2 {
+    margin-top:25px;
+    font-size: 3vw;
+}
   /* .left {
   order: 1;
   padding-right: 10px;
@@ -199,7 +203,6 @@ li {
   width: auto; */
   /* margin-bottom: 100px; */
   /* margin-top: 50px; */
-
 }
 
 
