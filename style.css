@@ -63,6 +63,7 @@ footer {
 }
 
 body {
+  margin: 0px;
   background-image: url('https://image.freepik.com/free-photo/natural-wooden-background_24837-269.jpg');
   background-size: cover;
   display: flex; 
