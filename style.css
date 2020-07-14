@@ -4,9 +4,15 @@ header {
   padding: 50px;
 
 }
+#title{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
 #liquor-form {
   padding-left: 300px;
-  margin-top: 80px;
+  margin-top: 20px;
   
 }
 
