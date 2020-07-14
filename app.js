@@ -1,6 +1,6 @@
 async function liquorSearch(drink) {
   const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
-  for (let i = 0; i < 5; i++)
+  for (let i = 0; i < 2; i++)
   try {
     let response = await axios.get(searchURL);
     let data = response.data.drinks[i]
