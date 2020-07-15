@@ -111,7 +111,7 @@ main{
 }
 
 /* h1{
-  margin-top: 0px;
+  margin-top: 0px; 
   margin-right: 600px;
 } */
 
@@ -119,6 +119,12 @@ h2 {
   margin-bottom: 0px;
   margin-top: 150px;
   text-align: center;
+}
+#recepie {
+  margin-top: 160px;
+}
+#drink-recepie {
+  margin-bottom: 30px;
 }
 
 h3{
@@ -143,6 +149,11 @@ li {
 
 #drink-names{
   margin-top: 50px;
+}
+
+#cocktail.grow{
+  /* width: 100%;
+  height: auto; */
 }
 
 #github.grow{
@@ -172,6 +183,10 @@ li {
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
+}
+
+#liquor-data{
+  width: 100%;
 }
 
 @-webkit-keyframes glow {
@@ -209,7 +224,18 @@ li {
   }
 }
 
+
+
 @media screen and (max-width:850px){
+
+.grow:hover { 
+    transform: scale(1.8); 
+}
+
+#cocktail.grow{
+  height: 100px;
+  margin-top: 160px;
+}
 
   h1.glow {
     font-size: 3vw;
@@ -252,131 +278,158 @@ li {
   border-radius: 25%;
 }
 /* 670 */
-@media screen and (max-width:450px){
+@media screen and (max-width:500px){
+  /* body{
+    margin: 0px;
+  } */
+  #drink-recepie {
+    margin-bottom: 5px;
+  }
  
-  #cocktail {
-    margin-top: 60px;
-    margin-bottom: 200px;
+  #cocktail.grow {
+    margin-top: 20px;
+    margin-bottom: 180px;
+    margin-right: 120px;
     height: 100px;
   }
 
+  .grow { 
+    transition: all .2s ease-in-out; 
+  }
+  .grow:hover { 
+    transform: scale(1.4); 
+  }
+
   h3 {
-    margin-top: 150px;
-    margin-bottom: 10px;
+    width:100%;
+    margin-top: 170px;
+    /* margin-bottom: 200px; */
     font-size: 3vw;
+  }
+  #recepie{
+    /* margin-bottom: 200px; */
+    
+    position: absolute;
+    width:100%;
   }
 
   h2 {
-    margin-top:100px;
-    margin-bottom: 150px;
-    font-size: 6vw;
+    width:100%;
+    margin-top:0px;
+    margin-bottom: 60px;
+    font-size: 7vw;
     text-align: center;
     text-decoration: underline;
   }
 
   li {
+    /* position: relative; */
     font-size: 3vw;
-    margin-bottom: 5px;
   }
   #github.grow{
     margin-left: 0px;
     height: 100%;
     width: auto;
   }
-/*   
-  img {
-    border-radius: none;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    margin-bottom: 10px;
-  }
-
-  #cocktail {
-    margin-top: 60px;
-    margin-bottom: 0px;
-  }
-  #github.grow{
-    margin-left: 0px;
-    height: 100%;
-    width: auto;
-  }
-  #recepie{
-    size: 2vw;
-  }
-
-  h1.glow{
-    font-size: 4vw;
-    margin: 0px;
-  }
-  #github.grow{
-    max-width: 100%;
-    max-height: 100%;
-  }
-  item-3 {
-    flex-basis: 100px;
+ 
+  .item-3 {
+    margin-top: 0px;
     order: 3;
   }
   
   .item-1 {
+    margin-top: 0px;
+    width:100%;
+    position: absolute;
     order: 1;
-    width: 50px;
   }
   
   .item-2 {
+    margin-top: -200px;
     order: 2;
-    width: 100px;
-    margin-left: 30px;
+    width:100%;
+    position: static;
+    /* width: 250px; */
+    margin-left: 0px;
   }
-
-  #linkedin.grow{
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 25%;
-  }
-
-  article{
-    order:0;
-    flex: 0 300px;
-  }
-
-  h2 {
-    margin-top:60px;
-    margin-bottom: 30px;
-    font-size: 6vw;
-    text-align: center;
-    text-decoration: underline;
-  }
-  h3 {
-    margin-top: 120px;
-    margin-bottom: 10px;
-    font-size: 4vw;
-  }
-
-  li {
-    font-size: 3vw;
-    margin-bottom: 5px;
-  }
-
-  #liquor-form{
-    align: center;
-  }
-
-  #drink-recepie{
-    size: 1px;
-    padding-top: 0px;
-    padding-left: 0px;
-  }
-  }
-  #drink-name {
-    height: 200px;
-    width: 75px;
-    padding-bottom: 0px;
-  }
-#recepie {
-  width: 150px;
-} */
 
 
 }
 
+@media screen and (max-width:320px){
+  /* body{
+    margin: 0px;
+  } */
+  #drink-recepie {
+    margin-bottom: 5px;
+  }
+ 
+  #cocktail.grow {
+    margin-top: 20px;
+    margin-bottom: 180px;
+    margin-right: 120px;
+    height: 100px;
+  }
+
+  .grow { 
+    transition: all .2s ease-in-out; 
+  }
+  .grow:hover { 
+    transform: scale(1.4); 
+  }
+
+  h3 {
+    width:100%;
+    margin-top: 170px;
+    /* margin-bottom: 200px; */
+    font-size: 3vw;
+  }
+  #recepie{
+    /* margin-bottom: 200px; */
+    
+    position: absolute;
+    width:100%;
+  }
+
+  h2 {
+    width:100%;
+    margin-top:0px;
+    margin-bottom: 60px;
+    font-size: 7vw;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  li {
+    /* position: relative; */
+    font-size: 3vw;
+  }
+  #github.grow{
+    margin-left: 0px;
+    height: 100%;
+    width: auto;
+  }
+ 
+  .item-3 {
+    margin-top: 0px;
+    order: 3;
+  }
+  
+  .item-1 {
+    margin-top: 0px;
+    width:100%;
+    position: absolute;
+    order: 1;
+  }
+  
+  .item-2 {
+    margin-top: -200px;
+    order: 2;
+    width:100%;
+    position: static;
+    /* width: 250px; */
+    margin-left: 0px;
+  }
+
+
+}

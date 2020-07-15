@@ -21,7 +21,7 @@ function showCocktailName(dataObj) {
   document.querySelector('#liquor-data').insertAdjacentHTML('beforeend', cocktailName)
 }
 function showCocktailImg(dataObj) {
-  let cocktailImg = `<img id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">`
+  let cocktailImg = `<img class= 'grow' id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">`
   document.querySelector('#recepie-data').insertAdjacentHTML('beforeend', cocktailImg)
 }
 
