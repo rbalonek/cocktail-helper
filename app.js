@@ -3,8 +3,9 @@ async function liquorSearch(drink) {
   for (let i = 0; i < 5; i++)
   try {
     let response = await axios.get(searchURL);
-    let data = response.data.drinks[Math.floor((Math.random() * 30) + 1)]
+    let data = response.data.drinks[Math.floor((Math.random() * 40) + 1)]
     searchFromId(data.idDrink)
+    // console.log(drinks[21])
     // console.log(response.data)
   } catch (error) {
   console.log(`bobs error: ${error}`)
@@ -84,6 +85,7 @@ async function searchFromId(id) {
     showIngredients(data)
     showCocktailName(data)
     showCocktailImg(data)
+    // console.log(data)
   } catch (error) {
   console.log(`bob err 2nd api: ${error}`)
   }
@@ -103,6 +105,21 @@ function showIngredients(dataObj) {
   <li id="drink-recepie">${dataObj.strIngredient4}, ${dataObj.strMeasure4}</li>
   `
   document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
+  // console.log(dataObj[21])
 }
 
-////dataObj.[21] while input !== 'null' i++
+
+// function showIngredients(dataObj) {
+//   // let j = 21;
+//   // while (j !== 'null') { j++ }
+//   // let k = 36;
+//   // while (k !== 'null') {k++}
+//     let ingredientText = `
+//   <li id="drink-recepie">${dataObj.strIngredient1}, ${dataObj.strMeasure1} </li>
+//   <li id="drink-recepie">${dataObj.strIngredient2}, ${dataObj.strMeasure2}</li>
+//   <li id="drink-recepie">${dataObj.strIngredient3}, ${dataObj.strMeasure3}</li>
+//   <li id="drink-recepie">${dataObj.strIngredient4}, ${dataObj.strMeasure4}</li>
+//   `
+//   document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
+//   // console.log(dataObj[21])
+// }

@@ -100,8 +100,8 @@ main{
   border-radius: 50%;
   height: 200px;
   width: auto;
-  margin-top: 0px;
-  margin-bottom: 55px;
+  margin-top: 75px;
+  margin-bottom: 75px;
 }
 
 #drink-name {
@@ -115,13 +115,14 @@ main{
 } */
 
 h2 {
-  margin-bottom: 70px;
-  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-top: 150px;
+  text-align: center;
 }
 
 h3{
+  margin-top: 130px;
   margin-bottom: 30px;
-  margin-top: 50px;
   color: whitesmoke;
   text-align: center;
   background:linear-gradient(bottom,rgba(0,0,0,1),rgba(0,0,0,.4));
