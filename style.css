@@ -184,7 +184,7 @@ li {
   }
 }
 
-@media screen and (max-width: 970px){
+@media screen and (max-width:970px){
 
   h1.glow {
     font-size: 3vw;
@@ -209,14 +209,21 @@ li {
   }
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width:850px){
 
   h1.glow {
     font-size: 3vw;
   }
 
   h2 { 
-    font-size:3vw; 
+    font-size:4vw; 
+    margin-bottom: 150px;
+    text-decoration: underline;
+    text-align: center;
+  }
+  h3 {
+    font-size: 2vw;
+    text-align: center;
   }
 
   li {
@@ -245,7 +252,38 @@ li {
   border-radius: 25%;
 }
 /* 670 */
-@media screen and (max-width: 400px){
+@media screen and (max-width:450px){
+ 
+  #cocktail {
+    margin-top: 60px;
+    margin-bottom: 200px;
+    height: 100px;
+  }
+
+  h3 {
+    margin-top: 150px;
+    margin-bottom: 10px;
+    font-size: 3vw;
+  }
+
+  h2 {
+    margin-top:100px;
+    margin-bottom: 150px;
+    font-size: 6vw;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  li {
+    font-size: 3vw;
+    margin-bottom: 5px;
+  }
+  #github.grow{
+    margin-left: 0px;
+    height: 100%;
+    width: auto;
+  }
+/*   
   img {
     border-radius: none;
     max-width: 100%;
@@ -255,12 +293,11 @@ li {
   }
 
   #cocktail {
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 0px;
   }
   #github.grow{
     margin-left: 0px;
-    /* transform: rotateY(180deg); */
     height: 100%;
     width: auto;
   }
@@ -276,9 +313,20 @@ li {
     max-width: 100%;
     max-height: 100%;
   }
-
+  item-3 {
+    flex-basis: 100px;
+    order: 3;
+  }
+  
+  .item-1 {
+    order: 1;
+    width: 50px;
+  }
+  
   .item-2 {
-    width: 100px
+    order: 2;
+    width: 100px;
+    margin-left: 30px;
   }
 
   #linkedin.grow{
@@ -295,17 +343,19 @@ li {
   h2 {
     margin-top:60px;
     margin-bottom: 30px;
-    font-size: 3vw;
+    font-size: 6vw;
     text-align: center;
+    text-decoration: underline;
   }
   h3 {
-    margin-top: 100px;
-    margin-bottom: 50px;
-    font-size: 2vw;
+    margin-top: 120px;
+    margin-bottom: 10px;
+    font-size: 4vw;
   }
 
   li {
-    font-size: 2vw;
+    font-size: 3vw;
+    margin-bottom: 5px;
   }
 
   #liquor-form{
@@ -317,7 +367,16 @@ li {
     padding-top: 0px;
     padding-left: 0px;
   }
-  li {
-    font-size:2vw;
   }
+  #drink-name {
+    height: 200px;
+    width: 75px;
+    padding-bottom: 0px;
+  }
+#recepie {
+  width: 150px;
+} */
+
+
 }
+
