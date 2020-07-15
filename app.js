@@ -3,9 +3,7 @@ async function liquorSearch(drink) {
   for (let i = 0; i < 5; i++)
   try {
     let response = await axios.get(searchURL);
-    let data = response.data.drinks[i]
-    showCocktailName(data)
-    showCocktailImg(data)
+    let data = response.data.drinks[Math.floor((Math.random() * 30) + 1)]
     searchFromId(data.idDrink)
     // console.log(response.data)
   } catch (error) {
@@ -84,6 +82,8 @@ async function searchFromId(id) {
     // console.log(response.data)
     showRecepie(data)
     showIngredients(data)
+    showCocktailName(data)
+    showCocktailImg(data)
   } catch (error) {
   console.log(`bob err 2nd api: ${error}`)
   }
@@ -105,3 +105,4 @@ function showIngredients(dataObj) {
   document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
 }
 
+////dataObj.[21] while input !== 'null' i++

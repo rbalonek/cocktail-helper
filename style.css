@@ -109,10 +109,10 @@ main{
   padding-bottom: 0px;
 }
 
-h1{
+/* h1{
   margin-top: 0px;
   margin-right: 600px;
-}
+} */
 
 h2 {
   margin-bottom: 70px;
@@ -226,8 +226,8 @@ li {
     padding-left: 0px;
   }
 }
-
-@media screen and (max-width: 670px){
+/* 670 */
+@media screen and (max-width: 400px){
   img {
     border-radius: none;
     max-width: 100%;
