@@ -23,7 +23,7 @@
 
 .item-2 {
   order: 3;
-  width: 500px;
+  /* width: 500px; */
   margin-left: 30px;
 }
 
@@ -66,6 +66,7 @@ article {
 
 footer {
   background-image: url('https://image.freepik.com/free-photo/cocktail-whiskey-cola_8353-1239.jpg');
+  /* transform: rotateY(180deg); */
   background-color: black;
   background-position: 90% 75%;
   background-repeat: no-repeat;
@@ -145,10 +146,13 @@ li {
 }
 
 #github.grow{
+  margin-left: 300px;
+  /* transform: rotateY(180deg); */
   height: 100px;
 }
 
 #linkedin.grow{
+  /* transform: rotateY(180deg); */
   height: 100px;
   border-radius: 25%;
 }
@@ -227,6 +231,19 @@ li {
     padding-left: 0px;
   }
 }
+#github.grow{
+  /* margin-left: 0px; */
+  /* transform: rotateY(180deg); */
+  height: 100%;
+  width: auto;
+}
+
+#linkedin.grow{
+  /* transform: rotateY(180deg); */
+  height: 100%;
+  width: auto;
+  border-radius: 25%;
+}
 /* 670 */
 @media screen and (max-width: 400px){
   img {
@@ -235,6 +252,17 @@ li {
     max-height: 100%;
     object-fit: contain;
     margin-bottom: 10px;
+  }
+
+  #cocktail {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+  #github.grow{
+    margin-left: 0px;
+    /* transform: rotateY(180deg); */
+    height: 100%;
+    width: auto;
   }
   #recepie{
     size: 2vw;
@@ -271,7 +299,7 @@ li {
     text-align: center;
   }
   h3 {
-    margin-top: 75px;
+    margin-top: 100px;
     margin-bottom: 50px;
     font-size: 2vw;
   }
