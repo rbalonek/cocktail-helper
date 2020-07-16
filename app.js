@@ -3,7 +3,7 @@ async function liquorSearch(drink) {
   for (let i = 0; i < 5; i++)
   try {
     let response = await axios.get(searchURL);
-    let data = response.data.drinks[Math.floor((Math.random() * 40) + 1)]
+    let data = response.data.drinks[Math.floor((Math.random() * 30) + 1)]
     searchFromId(data.idDrink)
     // console.log(drinks[21])
     // console.log(response.data)
