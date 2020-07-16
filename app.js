@@ -10,7 +10,7 @@ function showRecepie(dataObj) {
 }
 function showIngredients(dataObj) {
   let ingredientText = `
-    <li id="drink-recepie">${dataObj.strIngredient1}, ${dataObj.strMeasure1} </li>
+    <li id="drink-recepie">${dataObj.strIngredient1}, ${dataObj.strMeasure1}</li>
     <li id="drink-recepie">${dataObj.strIngredient2}, ${dataObj.strMeasure2}</li>
     <li id="drink-recepie">${dataObj.strIngredient3}, ${dataObj.strMeasure3}</li>
     <li id="drink-recepie">${dataObj.strIngredient4}, ${dataObj.strMeasure4}</li>`
@@ -40,40 +40,12 @@ submit.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#liquor-search').value
   liquorSearch(inputValue)
-  //reset the search bar when used
   document.querySelector('#liquor-search').value = ''
-  //change the placeholder or the search bar suggestion line
   document.querySelector('#liquor-search').placeholder = 'New Search'
   removeDrinkImg()
   removeDrinkInfo()
 })
-///// 1ST API TO GET ID# FROM LIQUOR SEARCH
-async function liquorSearch(drink) {
-  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
-  for (let i = 0; i < 5; i++)
-    try {
-      let response = await axios.get(searchURL);
-      let data = response.data.drinks[Math.floor((Math.random() * 30))]
-      searchFromId(data.idDrink)
-    } catch (error) {
-      console.log(`bobs error: ${error}`)
-    }
-}
-//2ND API TO USE ID# TO GRAB REST OF RESULTS
-async function searchFromId(id) {
-  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
-  try {
-    let response = await axios.get(searchURL);
-    let data = response.data.drinks[0]
-    showCocktailName(data)
-    showRecepie(data)
-    showIngredients(data)
-    showCocktailImg(data)
-  } catch (error) {
-    console.log(`bob err 2nd api: ${error}`)
-  }
-}
-
+///// SEARCH FOR DRINK FROM SPEED RACK IN HEADER /////
 function chooseGin() {
   removeDrinkImg()
   removeDrinkInfo()
@@ -93,4 +65,30 @@ function chooseRum() {
   removeDrinkImg()
   removeDrinkInfo()
   liquorSearch('Rum')
+}
+///// 1ST API TO GET ID# FROM LIQUOR SEARCH /////
+async function liquorSearch(drink) {
+  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
+  for (let i = 0; i < 5; i++)
+    try {
+      let response = await axios.get(searchURL);
+      let data = response.data.drinks[Math.floor((Math.random() * 30))]
+      searchFromId(data.idDrink)
+    } catch (error) {
+      console.log(`bobs error: ${error}`)
+    }
+}
+////// 2ND API TO USE ID# TO GRAB REST OF RESULTS ////
+async function searchFromId(id) {
+  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+  try {
+    let response = await axios.get(searchURL);
+    let data = response.data.drinks[0]
+    showCocktailName(data)
+    showRecepie(data)
+    showIngredients(data)
+    showCocktailImg(data)
+  } catch (error) {
+    console.log(`bob err 2nd api: ${error}`)
+  }
 }
