@@ -177,13 +177,19 @@ footer {
   .grow:hover { 
     transform: scale(1.5); 
   }
-  }
+}
 @media screen and (max-width:700px){
   h1.glow{
     text-align: right;
   }
 }
 @media screen and (max-width:500px){
+  header{
+    background-color: black;
+  }
+  footer{
+    background-color: black;
+  }
   #gin.grow,
   #vodka.grow,
   #tequila.grow,
@@ -205,6 +211,9 @@ footer {
     margin-top: 100px;
     margin-bottom: 80px;
   } 
+  p {
+  display: none;
+  }
 }
 @media screen and (max-width:400px){
   #cocktail.grow{
@@ -231,6 +240,14 @@ footer {
     margin-top: 150px;
     margin-bottom: 140px;
   } 
+  #github.grow{
+    margin-right: 30px;
+    height: 50px;
+  }
+  #linkedin.grow{
+    height: 50px;
+    border-radius: 25%;
+  }
 }
 @media screen and (max-width:280px){
   header{
