@@ -2,11 +2,11 @@
 function showCocktailName(dataObj) {
   let cocktailName = `
     <h2 id="drink-name">${dataObj.strDrink}</h2>`
-    document.querySelector('#drink-info').insertAdjacentHTML('beforeend', cocktailName)
+  document.querySelector('#drink-info').insertAdjacentHTML('beforeend', cocktailName)
 }
 function showRecepie(dataObj) {
   let recepieText = `<h3 id="drink-recepie">${dataObj.strInstructions}</h3>`
-    document.querySelector('#drink-info').insertAdjacentHTML('beforeend', recepieText)
+  document.querySelector('#drink-info').insertAdjacentHTML('beforeend', recepieText)
 }
 function showIngredients(dataObj) {
   let ingredientText = `
@@ -14,7 +14,7 @@ function showIngredients(dataObj) {
     <li id="drink-recepie">${dataObj.strIngredient2}, ${dataObj.strMeasure2}</li>
     <li id="drink-recepie">${dataObj.strIngredient3}, ${dataObj.strMeasure3}</li>
     <li id="drink-recepie">${dataObj.strIngredient4}, ${dataObj.strMeasure4}</li>`
-    document.querySelector('#drink-info').insertAdjacentHTML('beforeend', ingredientText)
+  document.querySelector('#drink-info').insertAdjacentHTML('beforeend', ingredientText)
 }
 function showCocktailImg(dataObj) {
   let cocktailImg = `<img class= 'grow' id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">`
@@ -51,14 +51,14 @@ submit.addEventListener('submit', (e) => {
 async function liquorSearch(drink) {
   const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
   for (let i = 0; i < 5; i++)
-  try {
-    let response = await axios.get(searchURL);
-    let data = response.data.drinks[Math.floor((Math.random() * 30))]
-    searchFromId(data.idDrink)
-  } catch (error) {
-  console.log(`bobs error: ${error}`)
-  }
-} 
+    try {
+      let response = await axios.get(searchURL);
+      let data = response.data.drinks[Math.floor((Math.random() * 30))]
+      searchFromId(data.idDrink)
+    } catch (error) {
+      console.log(`bobs error: ${error}`)
+    }
+}
 //2ND API TO USE ID# TO GRAB REST OF RESULTS
 async function searchFromId(id) {
   const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
@@ -70,6 +70,6 @@ async function searchFromId(id) {
     showIngredients(data)
     showCocktailImg(data)
   } catch (error) {
-  console.log(`bob err 2nd api: ${error}`)
+    console.log(`bob err 2nd api: ${error}`)
   }
 }
