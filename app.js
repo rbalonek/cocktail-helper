@@ -73,3 +73,24 @@ async function searchFromId(id) {
     console.log(`bob err 2nd api: ${error}`)
   }
 }
+
+function chooseGin() {
+  removeDrinkImg()
+  removeDrinkInfo()
+  liquorSearch('gin')
+}
+function chooseVodka() {
+  removeDrinkImg()
+  removeDrinkInfo()
+  liquorSearch('Vodka')
+}
+function chooseTequila() {
+  removeDrinkImg()
+  removeDrinkInfo()
+  liquorSearch('Tequila')
+}
+function chooseRum() {
+  removeDrinkImg()
+  removeDrinkInfo()
+  liquorSearch('Rum')
+}
