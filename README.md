@@ -111,12 +111,7 @@ async function searchFromId(id) {
 ## Change Log
  I first put together the HTML, CSS and connected it to the API and search. For all the information I wanted, I put the outputs of drink Name, drink Recepie, drink Ingredients, and drink Image. 
  
- My original plan was to have an individual section in a container for each set of outputs:
-    DRINK NAME
- RECEPIE   IMAGE
-   INGREDIENTS
- 
- This would help so I could move them around as the screen changed sizes. 
+ My original plan was to have an individual section in a container for each set of outputs. This would help so I could move them around as the screen changed sizes. 
  
  Unfortunately, the API was giving back information that was sometimes out of order with eachother, and the array order varied for certain drinks. This made me go back and place all the info (drink name, recepie, and ingredients) in one section, and have the image floating next to them. It just looked cleaner this way. 
  
