@@ -1,7 +1,3 @@
-#getLiquor{
-  size: 50px;
-}
-
 header {
   background-image: url('https://image.freepik.com/free-photo/cocktail-whiskey-cola_8353-1239.jpg');
   background-color: black;
@@ -10,30 +6,16 @@ header {
   height: 50px;
   padding: 50px;
 }
-  #liquor-form {
-    margin-top: 20px;
-  }
-  input {
-    border:3px solid #dadada;
-    border-radius:6px;
-    padding:5px;
-    margin-top:-10px;    
+
+#getLiquor:hover{
+  animation: shake 0.5s;
 }
+
 input:focus { 
     outline:none;
     border-color:#9ecaed;
     box-shadow:0 0 10px #9ecaed;
 }
-  .glowbtn {
-    border-color: #3498db;
-    color: #fff;
-    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-  }
-  .glowbtn:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-  }
   #gin.grow,
   #vodka.grow,
   #tequila.grow,
@@ -47,19 +29,13 @@ input:focus {
   #vodka.grow{
       left:50px;
     }
-    #tequila.grow{
+  #tequila.grow{
       left: 100px;
-    }
-    #rum.grow{
-      left: 150px;
-    }
-  #gin:hover,
-  #vodka:hover,
-  #tequila:hover,
-  #rum:hover {
-    animation: shake 0.5s;
-    /* animation-iteration-count: infinite; */
   }
+  #rum.grow{
+      left: 150px;
+  }
+  
 body {
   margin: 0px;
   /* Photo Credit: https://www.pexels.com/@davidguerrero https://www.pexels.com/photo/people-sitting-in-a-bar-2945691/ */
