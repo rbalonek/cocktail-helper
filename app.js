@@ -1,10 +1,13 @@
+//  GETTING DRINK NAME , IMAGE , RECEPIE, AND INGREDIENTS
 function showCocktailName(dataObj) {
   let cocktailName = `
   <h2 id="drink-name">${dataObj.strDrink}</h2> 
   `
   document.querySelector('#recepie').insertAdjacentHTML('beforeend', cocktailName)
 }
-//#recepie  #liquor-data
+// #RECEPIE => drink-info
+// #recepie-data => cocktail-img
+
 function showCocktailImg(dataObj) {
   let cocktailImg = `<img class= 'grow' id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">`
   document.querySelector('#recepie-data').insertAdjacentHTML('beforeend', cocktailImg)
@@ -15,7 +18,6 @@ function showRecepie(dataObj) {
   document.querySelector('#recepie').insertAdjacentHTML('beforeend', recepieText)
 }
 
-
 function showIngredients(dataObj) {
   let ingredientText = `
 <li id="drink-recepie">${dataObj.strIngredient1}, ${dataObj.strMeasure1} </li>
@@ -24,37 +26,26 @@ function showIngredients(dataObj) {
 <li id="drink-recepie">${dataObj.strIngredient4}, ${dataObj.strMeasure4}</li>
 `
 document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
-// console.log(dataObj[21])
 }
 
 
-
-
-function removeLiquor() {
-  const appendElement = document.querySelector('#liquor-data')
-  while (appendElement.lastChild) {
-    appendElement.removeChild(appendElement.lastChild)
-  }
-}
-function removeLeftSidebar() {
+/// REMOVING DRINK INFO FOR NEW SEARCH
+function removeDrinkImg() {
   const appendElement = document.querySelector('#recepie')
   while (appendElement.lastChild) {
     appendElement.removeChild(appendElement.lastChild)
   }
 }
-function removeRightSidebar() {
+
+function removeDrinkInfo() {
   const appendElement = document.querySelector('#recepie-data')
   while (appendElement.lastChild) {
     appendElement.removeChild(appendElement.lastChild)
   }
 }
 
-
-
-
-
+/// SEARCH FOR DRINK BY LIQUOR TYPE
 const submit = document.querySelector('#liquor-form')
-
 submit.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#liquor-search').value
@@ -65,14 +56,13 @@ submit.addEventListener('submit', (e) => {
   document.querySelector('#liquor-search').placeholder = 'Liquor Type'
   //to make sure it's coming up with the right thing... It does!
   // console.log(inputValue)
-  removeLiquor()
-  removeLeftSidebar()
-  removeRightSidebar()
+  removeDrinkImg()
+  removeDrinkInfo()
 })
 
+// /FIRGURE OUT DIFF BETWEEN liquor-form / liquor-search
 
-
-
+///// 1ST API TO GET ID# FROM LIQUOR SEARCH
 async function liquorSearch(drink) {
   const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
   for (let i = 0; i < 5; i++)
@@ -87,6 +77,7 @@ async function liquorSearch(drink) {
   }
 }
   
+//2ND API TO USE ID# TO GRAB REST OF RESULTS
 async function searchFromId(id) {
   const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
   try {
@@ -102,49 +93,3 @@ async function searchFromId(id) {
   console.log(`bob err 2nd api: ${error}`)
   }
 }
-
-// liquorSearch()
-
-//////////////////////////////Pulls Up Name, Image, and ID
-
-
-
-//////////////////////////////SEARCH Button
-
-
-//////////////////////////////Removes previous SEARCH
-
-
-///// Get dataObj.strDrink.idDrink and us it to go through another API to get 
-
-//// FROM https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Scotch
-
-///USE ID ${} TO PULL FROM https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
-
-///Get recepie, 
-
-
-// let drinkId = ${dataObj.idDrink}
-
-
-
-
-
-////////// SEE IF YOU CAN DO SOMETHING LIKE ${dataObj.strMeasure[i]}
-
-
-
-// function showIngredients(dataObj) {
-//   // let j = 21;
-//   // while (j !== 'null') { j++ }
-//   // let k = 36;
-//   // while (k !== 'null') {k++}
-//     let ingredientText = `
-//   <li id="drink-recepie">${dataObj.strIngredient1}, ${dataObj.strMeasure1} </li>
-//   <li id="drink-recepie">${dataObj.strIngredient2}, ${dataObj.strMeasure2}</li>
-//   <li id="drink-recepie">${dataObj.strIngredient3}, ${dataObj.strMeasure3}</li>
-//   <li id="drink-recepie">${dataObj.strIngredient4}, ${dataObj.strMeasure4}</li>
-//   `
-//   document.querySelector('#recepie').insertAdjacentHTML('beforeend', ingredientText)
-//   // console.log(dataObj[21])
-// }
