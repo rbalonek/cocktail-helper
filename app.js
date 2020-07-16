@@ -17,7 +17,7 @@ function showIngredients(dataObj) {
   document.querySelector('#drink-info').insertAdjacentHTML('beforeend', ingredientText)
 }
 function showCocktailImg(dataObj) {
-  let cocktailImg = `<img class= 'grow' id="cocktail" src="${dataObj.strDrinkThumb}" alt="drink">`
+  let cocktailImg = `<img class= 'grow' id="cocktail" src="${dataObj.strDrinkThumb}" onclick="alertDrink()" alt="drink">`
   document.querySelector('#cocktail-img').insertAdjacentHTML('beforeend', cocktailImg)
 }
 
@@ -65,6 +65,15 @@ function chooseRum() {
   removeDrinkImg()
   removeDrinkInfo()
   liquorSearch('Rum')
+}
+function alertDrink() {
+  if (confirm('Would you like to order this drink?')) {
+    // Save it!
+    alert('Coming right up! Your drink will be added to your bill.');
+  } else {
+    // Do nothing!
+    alert("Ok, let us know if you'd like a drink!");
+  }
 }
 ///// 1ST API TO GET ID# FROM LIQUOR SEARCH /////
 async function liquorSearch(drink) {
