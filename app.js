@@ -5,7 +5,7 @@ async function liquorSearch(drink) {
     let response = await axios.get(searchURL);
     let data = response.data.drinks[Math.floor((Math.random() * 30))]
     searchFromId(data.idDrink)
-    // console.log(drinks[21])
+    // console.log(data)
     // console.log(response.data)
   } catch (error) {
   console.log(`bobs error: ${error}`)
