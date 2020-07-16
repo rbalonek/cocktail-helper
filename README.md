@@ -1,6 +1,6 @@
 # Project Overview
 
-##  Cocktail Helper
+##  Make me a DRINK!
 
 
 ## Project Description
@@ -37,12 +37,12 @@ https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
 1. Search using spirit name 
 2. view ingredients needed for drink 
 3. view drink recipe / preparation 
-4. view history / info of drink. 
+4. view ingredients of drink. 
 5. see an img of completed drink
 
 #### PostMVP  
 
-1. fun css that animates a shaker when page results load
+1. fun css that animates images
 2. Design html/css to make it look like a bar
 3. Make an interactive ’speed rack’ image so you can just click on img of popular spirits.
 4. 'email this recipe' feature (as a recepie card w/ image).
@@ -51,10 +51,10 @@ https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Mon July 13| Build basic Structure of HTML, CSS and start implementation of API | Incomplete
-|Tues July 14| Continue API implementation and test results  | Incomplete
-|Wed July 15| Make sure CSS is complient with different sizes  | Incomplete
-|Thurs July 16| Clean up, add additional features if time allows | Incomplete
+|Mon July 13| Build basic Structure of HTML, CSS and start implementation of API | Complete
+|Tues July 14| Continue API implementation and test results  | Complete
+|Wed July 15| Make sure CSS is complient with different sizes  | Complete
+|Thurs July 16| Clean up, add additional features if time allows | Complete
 |Fri July 17| final clean up / present | Incomplete
 
 ## Priority Matrix
@@ -65,25 +65,61 @@ https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Building out basic HTML / CSS frame | H | 3hrs| TBD | TBD |
-| Apllying basic flex-box to different sized screens | H | 2hrs| TBD | TBD |
-| Forming basic Javascript API implementation | H | 3hrs| TBD | TBD |
-| Apllying and testing API functionality | H | 6hrs| TBD | TBD |
-| Cleaning up CSS / flex-box to fit output results | M | 2hrs| TBD | TBD |
-| Finish Cleaning up CSS / flex-box to fit output results | M | 3hrs| TBD | TBD |
-| Add extra features to CSS (background Image and basic feel of page) | M | 5hrs| TBD | TBD |
-| Cleaning up CSS / flex-box to fit output results | M | 3hrs| TBD | TBD |
-| Add in any additional features from post MVP list | M | 5hrs| TBD | TBD |
-| Clean up / catch up / finish anything needed for presentation | M | 4hrs| TBD | TBD |
-| Total | H | 36hrs| 5hrs | 5hrs |
+| Building out basic HTML / CSS frame | H | 3hrs| 2hrs | 2hrs |
+| Apllying basic flex-box to different sized screens | H | 2hrs| 3hrs | 3hrs |
+| Forming basic Javascript API implementation | H | 3hrs| 3hrs | 3hrs |
+| Apllying and testing API functionality | H | 6hrs| 5hrs | 5hrs |
+| Cleaning up CSS / flex-box to fit output results | M | 2hrs| 4hrs | 4hrs |
+| Finish Cleaning up CSS / flex-box to fit output results | M | 3hrs| 4hrs | 4hrs |
+| Add extra features to CSS (background Image and basic feel of page) | M | 5hrs| 5hrs | 5hrs |
+| Cleaning up CSS / flex-box to fit output results | M | 3hrs| 3hrs | 3hrs |
+| Add in any additional features from post MVP list | M | 5hrs| 6hrs | 6hrs |
+| Clean up / catch up / finish anything needed for presentation | M | 4hrs| 3hrs | 3hrs |
+| Total | H | 36hrs| 38hrs | 38hrs |
 
 ## Code Snippet
 
-  
-TBD
-```
+I noticed that the only way to get all the data I wanted was to search by liquorID, but I didn't want the user to have to use a drop down menu, so I did one API for the user to search by Liquor name and had that call the other API to get the data I wanted. I was happy I was able to put that together without any help. 
 
+```
+async function liquorSearch(drink) {
+  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
+  for (let i = 0; i < 5; i++)
+  try {
+    let response = await axios.get(searchURL);
+    let data = response.data.drinks[Math.floor((Math.random() * 30))]
+    searchFromId(data.idDrink)
+  } catch (error) {
+  console.log(`bobs error: ${error}`)
+  }
+}
+async function searchFromId(id) {
+  const searchURL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+  try {
+    let response = await axios.get(searchURL);
+    let data = response.data.drinks[0]
+    showCocktailName(data)
+    showRecepie(data)
+    showIngredients(data)
+    showCocktailImg(data)
+  } catch (error) {
+  console.log(`bob err 2nd api: ${error}`)
+  }
+}
 ```
 
 ## Change Log
- TBD
+ I first put together the HTML, CSS and connected it to the API and search. For all the information I wanted, I put the outputs of drink Name, drink Recepie, drink Ingredients, and drink Image. 
+ 
+ My original plan was to have an individual section in a container for each set of outputs:
+    DRINK NAME
+ RECEPIE   IMAGE
+   INGREDIENTS
+ 
+ This would help so I could move them around as the screen changed sizes. 
+ 
+ Unfortunately, the API was giving back information that was sometimes out of order with eachother, and the array order varied for certain drinks. This made me go back and place all the info (drink name, recepie, and ingredients) in one section, and have the image floating next to them. It just looked cleaner this way. 
+ 
+ After that, I added more CSS elements to the text and made the pictures for the drinks and social media links pop when hovered over. 
+ 
+ Finally, I tried to simplify all my code while breaking almost everything at some point, going on a walk, coming back to my computer, and making sense of everything. 
