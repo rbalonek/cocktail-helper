@@ -111,16 +111,12 @@ main{
     }
   }
 footer {
-  
   text-align: center;
   background-color: black;
   background-position: 90% 75%;
   background-repeat: no-repeat;
-  height: 50px;
-  padding: 50px;
 }
   p{
-    position:absolute;
     margin-top: 0px;
     color: rgba(104, 70, 20, 0.742);
   }
