@@ -211,6 +211,16 @@ footer {
   display: none;
   }
 }
+@media screen and (max-width:450px){
+  #cocktail.grow{
+    width: 100%;
+    height: 100%;
+    margin-top: 90px;
+    margin-bottom: 150px;
+  } 
+
+}
+
 @media screen and (max-width:400px){
   #cocktail.grow{
     width: 100%;
