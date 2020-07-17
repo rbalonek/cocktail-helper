@@ -55,7 +55,7 @@ https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17840
 |Tues July 14| Continue API implementation and test results  | Complete
 |Wed July 15| Make sure CSS is complient with different sizes  | Complete
 |Thurs July 16| Clean up, add additional features if time allows | Complete
-|Fri July 17| final clean up / present | Incomplete
+|Fri July 17| final clean up / present | Complete
 
 ## Priority Matrix
 
@@ -117,4 +117,4 @@ async function searchFromId(id) {
  
  After that, I added more CSS elements to the text and made the pictures for the drinks and social media links pop when hovered over. 
  
- Finally, I tried to simplify all my code while breaking almost everything at some point, going on a walk, coming back to my computer, and making sense of everything. 
+ Finally, I tried to simplify all my code while breaking almost everything at some point, going on a walk, coming back to my computer, and making sense of everything and adding a shakey feature on my shaker search button. 
