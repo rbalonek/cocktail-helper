@@ -1,7 +1,6 @@
 //  GETTING DRINK NAME , IMAGE , RECEPIE, AND INGREDIENTS
 function showCocktailName(dataObj) {
-  let cocktailName = `
-    <h2 id="drink-name">${dataObj.strDrink}</h2>`
+  let cocktailName = `<h2 id="drink-name">${dataObj.strDrink}</h2>`
   document.querySelector('#drink-info').insertAdjacentHTML('beforeend', cocktailName)
 }
 function showRecepie(dataObj) {
@@ -68,10 +67,8 @@ function chooseRum() {
 }
 function alertDrink() {
   if (confirm('Would you like to order this drink?')) {
-    // Save it!
     alert('Coming right up! Your drink will be added to your bill.');
   } else {
-    // Do nothing!
     alert("Ok, let us know if you'd like a drink!");
   }
 }
