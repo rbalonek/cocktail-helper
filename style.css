@@ -1,198 +1,222 @@
 header {
-  background-image: url('https://image.freepik.com/free-photo/cocktail-whiskey-cola_8353-1239.jpg');
+  background-image: url("https://image.freepik.com/free-photo/cocktail-whiskey-cola_8353-1239.jpg");
   background-color: black;
   background-position: 90% 75%;
   background-repeat: no-repeat;
   height: 50px;
   padding: 50px;
 }
-  #getLiquor:hover{
-    animation: shake 0.5s;
-  }
+#getLiquor:hover {
+  animation: shake 0.5s;
+}
 
-  input:focus { 
-      outline:none;
-      border-color:#9ecaed;
-      box-shadow:0 0 10px #9ecaed;
-  }
-  #gin.grow,
-  #vodka.grow,
-  #tequila.grow,
-  #rum.grow{
-    position: absolute;
-    top:0px; 
-  }
-  #gin.grow{
-    left:0px;
-  }
-  #vodka.grow{
-    left:50px;
-  }
-  #tequila.grow{
-    left: 100px;
-  }
-  #rum.grow{
-    left: 150px;
-  }
-  
+input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+#gin.grow,
+#vodka.grow,
+#tequila.grow,
+#rum.grow {
+  position: absolute;
+  top: 0px;
+}
+#gin.grow {
+  left: 0px;
+}
+#vodka.grow {
+  left: 50px;
+}
+#tequila.grow {
+  left: 100px;
+}
+#rum.grow {
+  left: 150px;
+}
+
 body {
   margin: 0px;
   /* Photo Credit: https://www.pexels.com/@davidguerrero https://www.pexels.com/photo/people-sitting-in-a-bar-2945691/ */
-  background-image: url('https://images.pexels.com/photos/2945691/pexels-photo-2945691.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
+  background-image: url("https://images.pexels.com/photos/2945691/pexels-photo-2945691.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
   background-size: cover;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-main{
+main {
   flex: 1;
   display: flex;
+}
+.container {
+  display: flex;
+  margin: 0 auto;
+}
+.item-img {
+  flex-basis: 100px;
+  order: -1;
+  margin-left: 5px;
+}
+.item-drinkInfo {
+  order: 3;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#drink-info {
+  margin-top: 40px;
+}
+#drink-recepie {
+  margin-bottom: 10px;
+}
+#cocktail.grow {
+  border-radius: 50%;
+  height: 200px;
+  width: auto;
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+h2 {
+  color: #fff;
+  font-family: "Cinzel", serif;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+h3 {
+  background-image: url("https://image.freepik.com/free-photo/natural-wooden-background_24837-269.jpg");
+  font-family: "Noto Serif JP", serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 15%;
+}
+li {
+  text-align: center;
+  size: 2px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  background-color: blanchedalmond;
+  border-radius: 25%;
+}
+#liquor-data {
+  width: 100%;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
-  .container {
-    display: flex;
-    margin: 0 auto;
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
-  .item-img {
-    flex-basis: 100px;
-    order: -1;
-    margin-left: 5px;
-  }
-  .item-drinkInfo {
-    order: 3;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  #drink-info {
-    margin-top: 40px;
-  }
-  #drink-recepie {
-    margin-bottom: 10px;
-  }
-  #cocktail.grow{
-    border-radius: 50%;
-    height: 200px;
-    width: auto;
-    margin-top: 80px;
-    margin-bottom: 10px;
-  }
-  h2{
-    color: #fff;
-    font-family: 'Cinzel', serif;
-    margin-bottom: 20px;
-    margin-top: 60px;
-    text-align: center;
-  }
-  h3{
-    background-image:   url('https://image.freepik.com/free-photo/natural-wooden-background_24837-269.jpg');
-    font-family: 'Noto Serif JP', serif;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: whitesmoke;
-    text-align: center;
-    border-radius: 15%;
-  }
-  li{
-    text-align: center;
-    size: 2px;
-    margin-top: 0px;
-    margin-bottom: 2px;
-    background-color: blanchedalmond;
-    border-radius: 25%;
-  }
-  #liquor-data{
-    width: 100%;
-  }
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-  }
+}
 footer {
   text-align: center;
   background-color: black;
   background-position: 90% 75%;
   background-repeat: no-repeat;
 }
-  p{
-    margin-top: 0px;
-    color: rgba(104, 70, 20, 0.742);
+p {
+  margin-top: 0px;
+  color: rgba(104, 70, 20, 0.742);
+}
+#github.grow {
+  margin-right: 30px;
+  height: 100px;
+}
+#linkedin.grow {
+  height: 100px;
+  border-radius: 25%;
+}
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.3);
+}
+.glow {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
   }
-  #github.grow{
-    margin-right: 30px;
-    height: 100px;
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
   }
-  #linkedin.grow{
-    height: 100px;
-    border-radius: 25%;
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
   }
-  .grow { 
-    transition: all .2s ease-in-out; 
-  }  
-  .grow:hover { 
-    transform: scale(1.3); 
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
   }
-  .glow {
-    font-size: 30px;
-    color: #fff;
-    text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
   }
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
   }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
 
-  /*   RE-SIZE FOR DIFFERENT SCREENS   */
-@media screen and (max-width:825px){
-  #cocktail-img{
+/*   RE-SIZE FOR DIFFERENT SCREENS   */
+@media screen and (max-width: 825px) {
+  #cocktail-img {
     width: 100px;
   }
-  #cocktail.grow{
+  #cocktail.grow {
     width: 100%;
     height: 100%;
     margin-top: 50px;
     margin-bottom: 150px;
-  } 
-  .grow { 
-    transition: all .2s ease-in-out; 
-  }  
-  .grow:hover { 
-    transform: scale(1.5); 
+  }
+  .grow {
+    transition: all 0.2s ease-in-out;
+  }
+  .grow:hover {
+    transform: scale(1.5);
   }
 }
-@media screen and (max-width:700px){
-  h1.glow{
+@media screen and (max-width: 700px) {
+  h1.glow {
     text-align: right;
   }
 }
-@media screen and (max-width:500px){
-  header{
+@media screen and (max-width: 500px) {
+  header {
     background-color: black;
   }
-  footer{
+  footer {
     background-color: black;
   }
   #gin.grow,
   #vodka.grow,
   #tequila.grow,
-  #rum.grow{
+  #rum.grow {
     display: none;
   }
-  h1.glow{
+  h1.glow {
     text-align: left;
   }
   .item-img {
@@ -201,87 +225,86 @@ footer {
   .item-drinkInfo {
     order: 1;
   }
-  #cocktail.grow{
+  #cocktail.grow {
     width: 100%;
     height: 100%;
     margin-top: 140px;
     margin-bottom: 115px;
-  } 
+  }
   p {
-  display: none;
+    display: none;
   }
 }
-@media screen and (max-width:450px){
-  #cocktail.grow{
+@media screen and (max-width: 450px) {
+  #cocktail.grow {
     width: 100%;
     height: 100%;
     margin-top: 90px;
     margin-bottom: 150px;
-  } 
-
+  }
 }
 
-@media screen and (max-width:400px){
-  #cocktail.grow{
+@media screen and (max-width: 400px) {
+  #cocktail.grow {
     width: 100%;
     height: 100%;
     margin-top: 140px;
     margin-bottom: 150px;
-  } 
+  }
 }
-@media screen and (max-width:350px){
+@media screen and (max-width: 350px) {
   header {
-    width:100%;
-    height:20%;
-    position:absolute;
-    top:0;
-    left:0;
-    background-color:blue;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
   }
-  
-  footer{
-    width:100%;
-    position:fixed;
-    bottom:0;
-    left:0;
+
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
   }
-  .container{
+  .container {
     margin-top: 150px;
   }
-  #liquor-form{
+  #liquor-form {
     position: absolute;
     margin-top: 0px;
   }
-  #cocktail.grow{
+  #cocktail.grow {
     width: 120%;
     height: 120%;
     margin-top: 150px;
     margin-bottom: 140px;
-  } 
-  #github.grow{
+  }
+  #github.grow {
     margin-right: 30px;
     height: 50px;
   }
-  #linkedin.grow{
+  #linkedin.grow {
     height: 50px;
     border-radius: 25%;
   }
 }
-@media screen and (max-width:280px){
-  header{
+@media screen and (max-width: 280px) {
+  header {
     position: fixed;
   }
-  .container{
+  .container {
     margin-top: 150px;
   }
-  #liquor-form{
+  #liquor-form {
     position: absolute;
     margin-top: 0px;
   }
-  #cocktail.grow{
+  #cocktail.grow {
     width: 130%;
     height: 130%;
     margin-top: 160px;
     margin-bottom: 180px;
-  } 
+  }
 }
